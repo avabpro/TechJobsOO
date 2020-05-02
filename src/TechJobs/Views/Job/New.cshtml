@@ -7,14 +7,31 @@
         <label asp-for="Name"></label>
         <input class="form-control" asp-for="Name" />
     </div>
+    <br />
     <div class="form-group">
-        <label asp-for="EmployerID"></label>
+        <label asp-for="EmployerID"></label><br />
         <select asp-for="EmployerID" asp-items="Model.Employers"></select>
     </div>
+    <br />
 
-    @{ 
+    @{
         // TODO #5 - Create <select> dropdowns for other job fields (outside of this @{ } block)
     }
+    <div class="form-group">
+        <label asp-for="MyLocation"></label><br />
+        <select asp-for="MyLocation" asp-items="Model.Locations"></select>
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="MyCoreCompetency"></label><br />
+        <select asp-for="MyCoreCompetency" asp-items="Model.CoreCompetencies"></select>
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="MyPositionType"></label><br />
+        <select asp-for="MyPositionType" asp-items="Model.PositionTypes"></select>
+    </div>
+    <br />
 
     <input type="submit" value="Add Job" />
 </form>
